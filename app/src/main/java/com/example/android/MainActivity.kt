@@ -7,24 +7,25 @@ import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
-    private var mCount =0
-    private var mShowCount:TextView?= null
+    private var mCount =1
+    private var rollDice:TextView?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mShowCount= findViewById<TextView>(R.id.show_count)
+        rollDice= findViewById<TextView>(R.id.show_count)
+
     }
 
     fun showToast(view: View) {
         Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT).show()
     }
 
-    fun countUp(view: View) {
-        mCount++
-        if(mShowCount !=null){
-            mShowCount!!.text =mCount.toString()
-        }
+    fun rollingDice(view: View) {
+        mCount=(1..6).random()
+        var textResult:TextView=findViewById(R.id.show_count)
+        textResult.text=mCount.toString()
 
     }
+
 }

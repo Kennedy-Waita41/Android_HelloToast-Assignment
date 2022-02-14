@@ -5,4 +5,5 @@
     <string name="button_label_toast">button_label_toast</string>
     <string name="Toast">Toast</string>
     <string name="Count">Count</string>
+    <string name="Roll">Roll</string>
 </resources>
